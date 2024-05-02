@@ -1,0 +1,31 @@
+mixin comment(commentData)
+    .comment 
+        if commentData.postedByAdmin
+            em (Posted By Admin)
+        .date= commentData.date
+        .author= commentData.author
+        .text= commentData.text
+
+doctype html 
+html 
+    head 
+        title Mixins in Pug
+    style.
+        .comment {
+            font-family: sens-serif;
+            line-height: 1.5;
+            padding: 10px;
+            border: 1px solid #555;
+            width: 250px;
+        }
+        .date { font-size: 86%; text-align: right;}
+        .author { font-size: 110%; font-weight: bold; }
+        .text {
+            font-size: 100%;
+        }
+
+    body   
+        - const c = { postedByAdmin: true, date: "01/05/2024", author: "Chit Khine", text: "Hey bro" }
+        - const d = { date: "01/05/2024", author: "Light", text: "Hey bro" }
+        +comment(c)
+        +comment(d)

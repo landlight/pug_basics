@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+<html> 
+  <head> 
+    <title>Mixins in Pug</title>
+  </head>
+  <style>
+    .comment {
+        font-family: sens-serif;
+        line-height: 1.5;
+        padding: 10px;
+        border: 1px solid #555;
+        width: 250px;
+    }
+    .date { font-size: 86%; text-align: right;}
+    .author { font-size: 110%; font-weight: bold; }
+    .text {
+        font-size: 100%;
+    }
+    
+  </style>
+  <body>  
+    <div class="comment"> <em>(Posted By Admin)</em>
+      <div class="date">01/05/2024</div>
+      <div class="author">Chit Khine</div>
+      <div class="text">Hey bro</div>
+    </div>
+    <div class="comment"> 
+      <div class="date">01/05/2024</div>
+      <div class="author">Light</div>
+      <div class="text">Hey bro</div>
+    </div>
+  </body>
+</html>
